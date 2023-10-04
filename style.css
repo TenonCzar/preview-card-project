@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* outline: 1px solid red; */
+}
+
+:root {
+  --greyblue: hsl(228, 12%, 48%);
+  --darkcyan: hsl(158, 36%, 37%);
+  --darkblue: hsl(212, 21%, 14%);
+  --cream: hsl(30, 38%, 92%);
+}
+
+body {
+    background-color: var(--cream);
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-size: 14px;
+}
+
+.card {
+    width: 320px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.card .peff {
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.writeup {
+    display: flex;
+    flex-direction: column;
+    color: var(--greyblue);
+    padding: 20px;
+    gap: 12px;
+}
+.desc {
+    line-height: 21px;
+}
+
+h2 {
+    font-size: 30px;
+    color: var(--darkblue);
+    font-family: "Fraunces", serif;
+}
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--darkcyan);
+    font-size: 2rem;
+    font-family: "Fraunces", serif;
+}
+.price span {
+    color: var(--greyblue);
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+button {
+    background-color: var(--darkcyan);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8px;
+    width: 100%;
+    gap: 1rem;
+    border-radius: 8px;
+    border-color: transparent;
+  }
+
+  button img {
+    max-width: 15px;
+  }
+
+button span {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: aliceblue;
+  }
+
+  /* || RESPONSIVENESS */
+
+  @media screen and (min-width: 580px){
+    .card {
+        flex-direction: row;
+    }
+
+    .card .peff {
+        content: url(images/image-product-desktop.jpg);
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 8px;
+        width: 70%;
+    }
+
+    .writeup {
+        background-color: hsl(0, 0%, 100%);
+        padding: 2rem 2.5rem;
+        gap: 18px;
+    }
+    .writeup h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    p {
+        font-size: 10px;
+        line-height: 16px;
+    }
+  }
