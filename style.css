@@ -19,13 +19,13 @@ body {
     background-color: var(--cream);
     font-family: "Montserrat", sans-serif;
     display: flex;
-    justify-content: center;
+    width: 100vw;
     height: 100vh;
     font-size: 14px;
 }
 
 .card {
-    width: 320px;
+    width: 90%;
     background-color: hsl(0, 0%, 100%);
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ body {
     border-radius: 8px;
 }
 
-.card .peff {
+.card .product {
     width: 100%;
     height: auto;
     border-top-right-radius: 8px;
@@ -97,21 +97,32 @@ button span {
 
   /* || RESPONSIVENESS */
 
+  @media screen and (min-width :320px){
+    h2 {
+        font-size: 20px;
+    }
+  }
+
   @media screen and (min-width: 580px){
     .card {
         flex-direction: row;
+        max-width: 320px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
     }
 
-    .card .peff {
+    .card .product {
         content: url(images/image-product-desktop.jpg);
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 8px;
         width: 70%;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 8px
     }
-
+    
     .writeup {
         background-color: hsl(0, 0%, 100%);
         padding: 2rem 2.5rem;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
         gap: 18px;
     }
     .writeup h2 {
